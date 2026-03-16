@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@600;700;800&family=Hind+Siliguri:wght@400;500;600&family=Noto+Serif+Bengali:wght@500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif-bn: "Noto Serif Bengali", serif;
+  --font-display-bn: "Baloo Da 2", cursive;
+  --font-sans-bn: "Hind Siliguri", sans-serif;
+}
+
+@layer utilities {
+  .title-effect {
+    color: #ef4444; /* Bright Red */
+    -webkit-text-stroke: 4px #ffffff;
+    paint-order: stroke fill;
+    filter: drop-shadow(0px 10px 15px rgba(220, 38, 38, 0.4)) drop-shadow(0px 0px 15px rgba(255, 255, 255, 0.3));
+    letter-spacing: 2px;
+  }
+
+  .glow-circle {
+    background: radial-gradient(circle, rgba(45, 212, 191, 0.12) 0%, rgba(0, 0, 0, 0) 70%);
+  }
+  
+  .glow-flare {
+    background: radial-gradient(circle, rgba(253, 224, 71, 0.12) 0%, transparent 60%);
+  }
+
+  .gold-text-gradient {
+    background: linear-gradient(to right, #fef08a, #fbbf24, #fef08a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .glass-panel {
+    background: rgba(13, 118, 104, 0.2);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(45, 212, 191, 0.25);
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5), inset 0 0 15px rgba(45, 212, 191, 0.1);
+  }
+
+  .member-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+}
+
+@media print {
+  @page {
+    margin: 0;
+    size: 1800px 1200px;
+  }
+  body {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    background: white;
+    margin: 0;
+    padding: 0;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  #scale-wrapper {
+    width: 1800px !important;
+    height: 1200px !important;
+    transform: none !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    overflow: visible !important;
+  }
+  #poster-canvas {
+    transform: none !important;
+    width: 1800px !important;
+    height: 1200px !important;
+  }
+}
