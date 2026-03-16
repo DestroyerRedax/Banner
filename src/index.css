@@ -50,7 +50,7 @@
 @media print {
   @page {
     margin: 0;
-    size: 1800px 1200px;
+    size: 1800px 1300px; /* Matches the exact pixel dimensions of the canvas for perfect 1:1 PDF export */
   }
   body {
     -webkit-print-color-adjust: exact !important;
@@ -67,7 +67,7 @@
   }
   #scale-wrapper {
     width: 1800px !important;
-    height: 1200px !important;
+    height: 1300px !important;
     transform: none !important;
     box-shadow: none !important;
     margin: 0 !important;
@@ -78,6 +78,6 @@
   #poster-canvas {
     transform: none !important;
     width: 1800px !important;
-    height: 1200px !important;
+    height: 1300px !important;
   }
 }
